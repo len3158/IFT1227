@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="devoir1_c2">
+		<CBX_INST_ENTRY INSTANCE_NAME="|devoir1_c2|mux161:inst|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_o4e.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

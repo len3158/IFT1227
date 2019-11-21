@@ -1,0 +1,34 @@
+|devoir1_c1
+V <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+A => inst14.IN0
+A => inst16.IN0
+A => inst15.IN0
+A => NOT_A.IN0
+A => inst19.IN0
+A => inst18.IN0
+B => inst14.IN1
+B => inst16.IN1
+B => inst12.IN0
+B => inst20.IN0
+B => inst17.IN0
+C => NOT_C.IN0
+C => inst20.IN1
+C => inst13.IN1
+C => inst19.IN1
+C => inst17.IN1
+C => inst18.IN1
+E => inst14.IN3
+E => inst15.IN3
+E => inst12.IN3
+E => inst20.IN2
+E => inst13.IN3
+E => inst19.IN2
+D => inst16.IN3
+D => inst15.IN2
+D => inst12.IN2
+D => inst13.IN2
+D => inst17.IN2
+D => inst18.IN2
+NOT_V <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+

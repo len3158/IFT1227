@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="devoir1_c3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|devoir1_c3|lpm_decode32:inst|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_b8f.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

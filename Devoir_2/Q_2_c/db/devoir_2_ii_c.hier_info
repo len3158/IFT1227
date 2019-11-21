@@ -1,0 +1,10 @@
+|devoir_2_ii_c
+clk => state~1.DATAIN
+reset_n => state~3.DATAIN
+y[0] <= y[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

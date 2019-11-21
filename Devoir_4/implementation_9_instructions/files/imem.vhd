@@ -1,0 +1,46 @@
+--IFT1227: Devoir 4
+--Auteur: Lenny SIEMENI, Matricule: 1055234
+library IEEE;
+use IEEE.STD_LOGIC_1164.all; 
+use STD.TEXTIO.all;
+use IEEE.STD_LOGIC_UNSIGNED.all; use IEEE.STD_LOGIC_ARITH.all;
+
+entity imem is -- instruction memory
+	port (a: in STD_LOGIC_VECTOR (5 downto 0);
+			rd: out STD_LOGIC_VECTOR (31 downto 0));
+end;
+
+architecture behave of imem is
+begin
+	process(a)
+		file mem_file: TEXT;
+		variable L: line;
+		variable ch: character;
+		variable index, result: integer;
+		type ramtype is array (63 downto 0) of STD_LOGIC_VECTOR(31 downto 0);
+		variable mem: ramtype;
+	begin
+	-- initialize memory 
+		for i in 0 to 63 loop 
+			mem(conv_integer(i)) := CONV_STD_LOGIC_VECTOR (0, 32);
+		end loop;
+		mem(0) := X"20040006"; --addi 	$4, $0, 6
+		mem(1) := X"0c100002"; --jal fib_iter
+		mem(2) := X"20080000"; --sw $2, 0xFFFF0010($0)
+		mem(3) := X"20090000"; --li 	$2, 10
+		mem(4) := X"200a0000";
+		mem(5) := X"200b0001";
+		mem(6) := X"200c0001";
+		mem(7) := X"0184082a";
+		mem(8) := X"10200005";
+		mem(9) := X"014b4820";
+		mem(10) := X"01605020";
+		mem(11) := X"01205820";
+		mem(12) := X"218c0001";
+		mem(13) := X"08100007";
+		mem(14) := X"ac090010";
+		
+	-- read memory
+		rd <= mem(CONV_INTEGER(a));
+end process;
+end;

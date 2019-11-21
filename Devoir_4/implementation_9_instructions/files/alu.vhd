@@ -1,0 +1,53 @@
+--IFT1227: Devoir 4
+--Auteur: Lenny SIEMENI, Matricule: 1055234
+library IEEE; use IEEE.STD_LOGIC_1164.ALL;
+use ieee.NUMERIC_STD.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity alu is
+	--generic ( 
+  	    -- constant shamt: STD_LOGIC_VECTOR(4 downto 0) := "00001"  -- nombre de bits a deplacer pour sll
+	    --);
+	
+	port (a, b: in STD_LOGIC_VECTOR(31 downto 0);
+			alucontrol: in STD_LOGIC_VECTOR (5 downto 0);
+			shamt: in STD_LOGIC_VECTOR(4 downto 0);
+			z, o : out STD_LOGIC;
+			y: out STD_LOGIC_VECTOR(31 downto 0));
+end;
+architecture behave of alu is
+signal s, diff: STD_LOGIC_VECTOR(31 downto 0);
+begin
+	diff <= a - b;
+	process (a, b, alucontrol, s, diff) begin
+		case alucontrol is
+			when "000000" => s <= std_logic_vector("sll"(unsigned(b),to_integer(unsigned(shamt))));--sll (shiftAmount)
+			when "001000" => s <= a + 0; --8 jr|lui|ori			
+			when "100000" => s <= a + b; --32 add
+			when "100010" => s <= a - b; --34 sub
+			when "100100" => s <= a and b; --36 and
+			when "100101" => s <= a or b; --37 or
+			when "100110" => s <= a xor b; --38 xor
+			when "100111" => s <= not (a or b); --39 nor 
+			when "101010" => -- 42 SLT
+					if diff(31) = '1' then 
+						s <= X"00000001"; 
+					else 
+						s <= X"00000000"; 
+					end if;
+			when "101011" => -- 43 SLTU
+				if a<b  then
+					s <= X"00000001";
+				else
+					s <= X"00000000";
+					end if;
+			
+			when "101000" => s <= std_logic_vector((unsigned(a)*4)+unsigned(b)); -- 40 multiplication*4 signee pour Index Intadr instruction
+			when others => s <= "--------------------------------"; --Don't care
+		end case;
+	end process;
+	
+	z <= '1' when s = X"00000000" else '0';
+	o <= '1' when a(31) = b(31) and (a(31) /= s(31)) else '0';
+	y <= s;
+end;

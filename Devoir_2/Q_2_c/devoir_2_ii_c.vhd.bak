@@ -1,0 +1,6 @@
+library IEEE; use IEEE.STD_LOGIC_1164.all;
+
+entity devoir_2_ii_c is 
+	port(clk, reset: in STD_LOGIC;
+		  y:			  out STD_LOGIC;
+	

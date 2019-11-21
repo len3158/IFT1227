@@ -1,0 +1,1065 @@
+TimeQuest Timing Analyzer report for devoir_2_iii
+Mon Feb 26 16:38:33 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Clocks
+  4. Slow Model Fmax Summary
+  5. Slow Model Setup Summary
+  6. Slow Model Hold Summary
+  7. Slow Model Recovery Summary
+  8. Slow Model Removal Summary
+  9. Slow Model Minimum Pulse Width Summary
+ 10. Slow Model Setup: 'clk'
+ 11. Slow Model Hold: 'clk'
+ 12. Slow Model Minimum Pulse Width: 'clk'
+ 13. Clock to Output Times
+ 14. Minimum Clock to Output Times
+ 15. Fast Model Setup Summary
+ 16. Fast Model Hold Summary
+ 17. Fast Model Recovery Summary
+ 18. Fast Model Removal Summary
+ 19. Fast Model Minimum Pulse Width Summary
+ 20. Fast Model Setup: 'clk'
+ 21. Fast Model Hold: 'clk'
+ 22. Fast Model Minimum Pulse Width: 'clk'
+ 23. Clock to Output Times
+ 24. Minimum Clock to Output Times
+ 25. Multicorner Timing Analysis Summary
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Setup Transfers
+ 29. Hold Transfers
+ 30. Report TCCS
+ 31. Report RSKM
+ 32. Unconstrained Paths
+ 33. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; devoir_2_iii                                                      ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 340.6 MHz ; 340.6 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -1.936 ; -21.985       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.574 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.222 ; -32.222               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.936 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.970      ;
+; -1.895 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.931      ;
+; -1.894 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.930      ;
+; -1.829 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.863      ;
+; -1.788 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.824      ;
+; -1.788 ; devoir_2_ii_c:generateur|state.S21 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.822      ;
+; -1.787 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.823      ;
+; -1.747 ; devoir_2_ii_c:generateur|state.S21 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.783      ;
+; -1.746 ; devoir_2_ii_c:generateur|state.S21 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.782      ;
+; -1.696 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.732      ;
+; -1.688 ; devoir_2_ii_c:generateur|state.S17 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.722      ;
+; -1.647 ; devoir_2_ii_c:generateur|state.S17 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.683      ;
+; -1.646 ; devoir_2_ii_c:generateur|state.S17 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.682      ;
+; -1.644 ; devoir_2_ii_c:generateur|state.S21 ; devoir_2_ii_c:generateur|state.S22 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.680      ;
+; -1.566 ; devoir_2_ii_c:generateur|state.S22 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.600      ;
+; -1.547 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.585      ;
+; -1.546 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.584      ;
+; -1.535 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.569      ;
+; -1.530 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.568      ;
+; -1.529 ; devoir_2_ii_c:generateur|state.S23 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.565      ;
+; -1.529 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.567      ;
+; -1.529 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.567      ;
+; -1.525 ; devoir_2_ii_c:generateur|state.S22 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.561      ;
+; -1.524 ; devoir_2_ii_c:generateur|state.S22 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.560      ;
+; -1.512 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.550      ;
+; -1.506 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.542      ;
+; -1.489 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.525      ;
+; -1.477 ; devoir_2_ii_c:generateur|state.S26 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.513      ;
+; -1.467 ; devoir_2_ii_c:generateur|state.S16 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.501      ;
+; -1.464 ; devoir_2_ii_c:generateur|state.S24 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.498      ;
+; -1.456 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S22 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.494      ;
+; -1.448 ; devoir_2_ii_c:generateur|state.S17 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.484      ;
+; -1.437 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.471      ;
+; -1.436 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.474      ;
+; -1.426 ; devoir_2_ii_c:generateur|state.S16 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.462      ;
+; -1.425 ; devoir_2_ii_c:generateur|state.S16 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.461      ;
+; -1.421 ; devoir_2_ii_c:generateur|state.S15 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.455      ;
+; -1.419 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.457      ;
+; -1.419 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.457      ;
+; -1.417 ; devoir_2_ii_c:generateur|state.S25 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.453      ;
+; -1.414 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.450      ;
+; -1.413 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.449      ;
+; -1.407 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.443      ;
+; -1.397 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.433      ;
+; -1.395 ; devoir_2_ii_c:generateur|state.S29 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.429      ;
+; -1.380 ; devoir_2_ii_c:generateur|state.S15 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.416      ;
+; -1.379 ; devoir_2_ii_c:generateur|state.S15 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.415      ;
+; -1.321 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.355      ;
+; -1.316 ; devoir_2_ii_c:generateur|state.S23 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.354      ;
+; -1.316 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.352      ;
+; -1.315 ; devoir_2_ii_c:generateur|state.S23 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.353      ;
+; -1.315 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.351      ;
+; -1.308 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.346      ;
+; -1.307 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.345      ;
+; -1.307 ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.341      ;
+; -1.303 ; devoir_2_ii_c:generateur|state.S28 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.337      ;
+; -1.299 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.333      ;
+; -1.299 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.335      ;
+; -1.290 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.328      ;
+; -1.280 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.316      ;
+; -1.279 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.315      ;
+; -1.279 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.317      ;
+; -1.278 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.316      ;
+; -1.276 ; devoir_2_ii_c:generateur|state.S27 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.310      ;
+; -1.274 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.312      ;
+; -1.267 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.303      ;
+; -1.264 ; devoir_2_ii_c:generateur|state.S26 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.302      ;
+; -1.263 ; devoir_2_ii_c:generateur|state.S26 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.301      ;
+; -1.262 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.298      ;
+; -1.261 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.299      ;
+; -1.251 ; devoir_2_ii_c:generateur|state.S24 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.287      ;
+; -1.250 ; devoir_2_ii_c:generateur|state.S24 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.286      ;
+; -1.239 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.277      ;
+; -1.238 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.274      ;
+; -1.236 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.274      ;
+; -1.227 ; devoir_2_ii_c:generateur|state.S16 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.263      ;
+; -1.217 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S22 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.255      ;
+; -1.204 ; devoir_2_ii_c:generateur|state.S25 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.242      ;
+; -1.203 ; devoir_2_ii_c:generateur|state.S25 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.241      ;
+; -1.197 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.235      ;
+; -1.186 ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.222      ;
+; -1.185 ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.221      ;
+; -1.180 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.216      ;
+; -1.178 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.214      ;
+; -1.177 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.213      ;
+; -1.174 ; devoir_2_ii_c:generateur|state.S19 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.208      ;
+; -1.169 ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.205      ;
+; -1.168 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.206      ;
+; -1.161 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.197      ;
+; -1.159 ; devoir_2_ii_c:generateur|state.S29 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.195      ;
+; -1.159 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.197      ;
+; -1.158 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.196      ;
+; -1.141 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.179      ;
+; -1.134 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.170      ;
+; -1.118 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.154      ;
+; -1.117 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.153      ;
+; -1.103 ; devoir_2_ii_c:generateur|state.S30 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 2.137      ;
+; -1.094 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.132      ;
+; -1.091 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 1.000        ; 0.002      ; 2.129      ;
+; -1.081 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.117      ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.574 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S23 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.840      ;
+; 0.667 ; devoir_2_ii_c:generateur|state.S19 ; devoir_2_ii_c:generateur|state.S20 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.933      ;
+; 0.667 ; devoir_2_ii_c:generateur|state.S27 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.933      ;
+; 0.674 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S8  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.940      ;
+; 0.681 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S13 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.947      ;
+; 0.697 ; devoir_2_ii_c:generateur|state.S25 ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.963      ;
+; 0.720 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S2  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.986      ;
+; 0.720 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S23 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.986      ;
+; 0.729 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S3  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.995      ;
+; 0.813 ; devoir_2_ii_c:generateur|state.S28 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.079      ;
+; 0.815 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S23 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.081      ;
+; 0.826 ; devoir_2_ii_c:generateur|state.S28 ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.092      ;
+; 0.848 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S11 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.114      ;
+; 0.858 ; devoir_2_ii_c:generateur|state.S23 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.126      ;
+; 0.859 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.125      ;
+; 0.861 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S10 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.127      ;
+; 0.869 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S7  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.135      ;
+; 0.870 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S14 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.136      ;
+; 0.883 ; devoir_2_ii_c:generateur|state.S16 ; devoir_2_ii_c:generateur|state.S17 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.149      ;
+; 0.965 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; -0.002     ; 1.229      ;
+; 0.976 ; devoir_2_ii_c:generateur|state.S27 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.242      ;
+; 1.008 ; devoir_2_ii_c:generateur|state.S24 ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; -0.002     ; 1.272      ;
+; 1.031 ; devoir_2_ii_c:generateur|state.S15 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.297      ;
+; 1.085 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S12 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.351      ;
+; 1.093 ; devoir_2_ii_c:generateur|state.S26 ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.361      ;
+; 1.097 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S9  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.361      ;
+; 1.109 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S5  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.375      ;
+; 1.110 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.378      ;
+; 1.112 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S15 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.380      ;
+; 1.115 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S4  ; clk          ; clk         ; 0.000        ; 0.002      ; 1.383      ;
+; 1.118 ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S19 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.384      ;
+; 1.186 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.452      ;
+; 1.298 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.566      ;
+; 1.324 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.590      ;
+; 1.352 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.618      ;
+; 1.401 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.669      ;
+; 1.408 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.676      ;
+; 1.411 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.679      ;
+; 1.422 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.688      ;
+; 1.435 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S21 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.701      ;
+; 1.440 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.708      ;
+; 1.440 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.708      ;
+; 1.444 ; devoir_2_ii_c:generateur|state.S22 ; devoir_2_ii_c:generateur|state.S23 ; clk          ; clk         ; 0.000        ; -0.002     ; 1.708      ;
+; 1.454 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.720      ;
+; 1.471 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.737      ;
+; 1.479 ; devoir_2_ii_c:generateur|state.S15 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.745      ;
+; 1.490 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.756      ;
+; 1.494 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.762      ;
+; 1.500 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.766      ;
+; 1.503 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.769      ;
+; 1.511 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.779      ;
+; 1.512 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.780      ;
+; 1.518 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.784      ;
+; 1.525 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.793      ;
+; 1.548 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S21 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.816      ;
+; 1.570 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.836      ;
+; 1.579 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.845      ;
+; 1.588 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.854      ;
+; 1.591 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.859      ;
+; 1.620 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.888      ;
+; 1.623 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.891      ;
+; 1.624 ; devoir_2_ii_c:generateur|state.S22 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.890      ;
+; 1.643 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.909      ;
+; 1.646 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.912      ;
+; 1.671 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 0.000        ; -0.002     ; 1.935      ;
+; 1.681 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.949      ;
+; 1.681 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.949      ;
+; 1.683 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.949      ;
+; 1.684 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S6  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.950      ;
+; 1.691 ; devoir_2_ii_c:generateur|state.S17 ; devoir_2_ii_c:generateur|state.S18 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.957      ;
+; 1.759 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.025      ;
+; 1.791 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.057      ;
+; 1.796 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.062      ;
+; 1.803 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.071      ;
+; 1.806 ; devoir_2_ii_c:generateur|state.S19 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.072      ;
+; 1.811 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.077      ;
+; 1.812 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.080      ;
+; 1.814 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 0.000        ; -0.002     ; 2.078      ;
+; 1.818 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.086      ;
+; 1.822 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.088      ;
+; 1.822 ; devoir_2_ii_c:generateur|state.S19 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.088      ;
+; 1.823 ; devoir_2_ii_c:generateur|state.S19 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.089      ;
+; 1.826 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.094      ;
+; 1.826 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.094      ;
+; 1.826 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.092      ;
+; 1.828 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.096      ;
+; 1.829 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.097      ;
+; 1.846 ; devoir_2_ii_c:generateur|state.S21 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.112      ;
+; 1.851 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.117      ;
+; 1.861 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.129      ;
+; 1.864 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.132      ;
+; 1.873 ; devoir_2_ii_c:generateur|state.S30 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; -0.002     ; 2.137      ;
+; 1.887 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.153      ;
+; 1.888 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.154      ;
+; 1.904 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.170      ;
+; 1.911 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.179      ;
+; 1.928 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.196      ;
+; 1.929 ; devoir_2_ii_c:generateur|state.S29 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.195      ;
+; 1.929 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 2.197      ;
+; 1.931 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.197      ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk   ; Rise       ; clk                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S10 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S10 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S11 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S11 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S12 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S12 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S13 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S13 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S14 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S14 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S15 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S15 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S16 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S16 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S17 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S17 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S18 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S18 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S19 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S19 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S2  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S2  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S20 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S20 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S21 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S21 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S22 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S22 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S23 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S23 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S24 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S24 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S25 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S25 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S26 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S26 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S27 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S27 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S28 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S28 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S29 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S29 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S3  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S3  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S30 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S30 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S4  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S4  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S5  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S5  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S6  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S6  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S7  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S7  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S8  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S8  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S9  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S9  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clk_delay_ctrl|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clk_delay_ctrl|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clk_delay_ctrl|clkout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clk_delay_ctrl|clkout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S0|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S0|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S10|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S10|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S11|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S11|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S12|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S12|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S13|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S13|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S14|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S14|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S15|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S15|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S16|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S16|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S17|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S17|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S18|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S18|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S19|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S19|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S1|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S1|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S20|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S20|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S21|clk           ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; hex0[*]   ; clk        ; 14.222 ; 14.222 ; Rise       ; clk             ;
+;  hex0[0]  ; clk        ; 13.693 ; 13.693 ; Rise       ; clk             ;
+;  hex0[1]  ; clk        ; 13.714 ; 13.714 ; Rise       ; clk             ;
+;  hex0[2]  ; clk        ; 13.725 ; 13.725 ; Rise       ; clk             ;
+;  hex0[3]  ; clk        ; 13.961 ; 13.961 ; Rise       ; clk             ;
+;  hex0[4]  ; clk        ; 13.816 ; 13.816 ; Rise       ; clk             ;
+;  hex0[5]  ; clk        ; 14.222 ; 14.222 ; Rise       ; clk             ;
+;  hex0[6]  ; clk        ; 13.923 ; 13.923 ; Rise       ; clk             ;
+; hex1[*]   ; clk        ; 14.525 ; 14.525 ; Rise       ; clk             ;
+;  hex1[1]  ; clk        ; 14.416 ; 14.416 ; Rise       ; clk             ;
+;  hex1[2]  ; clk        ; 14.525 ; 14.525 ; Rise       ; clk             ;
+; hex2[*]   ; clk        ; 9.785  ; 9.785  ; Rise       ; clk             ;
+;  hex2[6]  ; clk        ; 9.785  ; 9.785  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; hex0[*]   ; clk        ; 8.471 ; 8.471 ; Rise       ; clk             ;
+;  hex0[0]  ; clk        ; 8.529 ; 8.529 ; Rise       ; clk             ;
+;  hex0[1]  ; clk        ; 8.471 ; 8.471 ; Rise       ; clk             ;
+;  hex0[2]  ; clk        ; 8.703 ; 8.703 ; Rise       ; clk             ;
+;  hex0[3]  ; clk        ; 8.796 ; 8.796 ; Rise       ; clk             ;
+;  hex0[4]  ; clk        ; 8.949 ; 8.949 ; Rise       ; clk             ;
+;  hex0[5]  ; clk        ; 8.965 ; 8.965 ; Rise       ; clk             ;
+;  hex0[6]  ; clk        ; 8.901 ; 8.901 ; Rise       ; clk             ;
+; hex1[*]   ; clk        ; 9.418 ; 9.418 ; Rise       ; clk             ;
+;  hex1[1]  ; clk        ; 9.418 ; 9.418 ; Rise       ; clk             ;
+;  hex1[2]  ; clk        ; 9.527 ; 9.527 ; Rise       ; clk             ;
+; hex2[*]   ; clk        ; 8.634 ; 8.634 ; Rise       ; clk             ;
+;  hex2[6]  ; clk        ; 8.634 ; 8.634 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.366 ; -1.727        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.268 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.222 ; -32.222               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.366 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.003     ; 1.395      ;
+; -0.321 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.351      ;
+; -0.314 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.345      ;
+; -0.313 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.344      ;
+; -0.309 ; devoir_2_ii_c:generateur|state.S21 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.339      ;
+; -0.269 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.301      ;
+; -0.268 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.300      ;
+; -0.257 ; devoir_2_ii_c:generateur|state.S21 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.289      ;
+; -0.256 ; devoir_2_ii_c:generateur|state.S21 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.288      ;
+; -0.255 ; devoir_2_ii_c:generateur|state.S17 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.003     ; 1.284      ;
+; -0.237 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.268      ;
+; -0.218 ; devoir_2_ii_c:generateur|state.S21 ; devoir_2_ii_c:generateur|state.S22 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.250      ;
+; -0.203 ; devoir_2_ii_c:generateur|state.S17 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.234      ;
+; -0.202 ; devoir_2_ii_c:generateur|state.S17 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.233      ;
+; -0.189 ; devoir_2_ii_c:generateur|state.S22 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.219      ;
+; -0.173 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.003     ; 1.202      ;
+; -0.171 ; devoir_2_ii_c:generateur|state.S23 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.203      ;
+; -0.171 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.205      ;
+; -0.170 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.204      ;
+; -0.169 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.203      ;
+; -0.168 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.202      ;
+; -0.166 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.200      ;
+; -0.164 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.198      ;
+; -0.161 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.193      ;
+; -0.159 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.191      ;
+; -0.157 ; devoir_2_ii_c:generateur|state.S15 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.187      ;
+; -0.151 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S22 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.185      ;
+; -0.151 ; devoir_2_ii_c:generateur|state.S26 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.183      ;
+; -0.140 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.003      ; 1.175      ;
+; -0.138 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.003      ; 1.173      ;
+; -0.137 ; devoir_2_ii_c:generateur|state.S16 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.003     ; 1.166      ;
+; -0.137 ; devoir_2_ii_c:generateur|state.S22 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.169      ;
+; -0.136 ; devoir_2_ii_c:generateur|state.S22 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.168      ;
+; -0.129 ; devoir_2_ii_c:generateur|state.S24 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.159      ;
+; -0.126 ; devoir_2_ii_c:generateur|state.S17 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.157      ;
+; -0.105 ; devoir_2_ii_c:generateur|state.S15 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.137      ;
+; -0.104 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.003     ; 1.133      ;
+; -0.104 ; devoir_2_ii_c:generateur|state.S15 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.136      ;
+; -0.104 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.003     ; 1.133      ;
+; -0.101 ; devoir_2_ii_c:generateur|state.S25 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.133      ;
+; -0.100 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.003      ; 1.135      ;
+; -0.097 ; devoir_2_ii_c:generateur|state.S29 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.127      ;
+; -0.096 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.127      ;
+; -0.095 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.126      ;
+; -0.094 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.126      ;
+; -0.091 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.122      ;
+; -0.085 ; devoir_2_ii_c:generateur|state.S16 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.116      ;
+; -0.084 ; devoir_2_ii_c:generateur|state.S16 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.115      ;
+; -0.077 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.111      ;
+; -0.076 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.110      ;
+; -0.072 ; devoir_2_ii_c:generateur|state.S28 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.102      ;
+; -0.072 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.106      ;
+; -0.070 ; devoir_2_ii_c:generateur|state.S27 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.100      ;
+; -0.067 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.099      ;
+; -0.065 ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.095      ;
+; -0.060 ; devoir_2_ii_c:generateur|state.S23 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.094      ;
+; -0.059 ; devoir_2_ii_c:generateur|state.S23 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.093      ;
+; -0.052 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.083      ;
+; -0.051 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.082      ;
+; -0.047 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.003     ; 1.076      ;
+; -0.046 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.003      ; 1.081      ;
+; -0.043 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.003      ; 1.078      ;
+; -0.040 ; devoir_2_ii_c:generateur|state.S26 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.074      ;
+; -0.039 ; devoir_2_ii_c:generateur|state.S26 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.073      ;
+; -0.037 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.069      ;
+; -0.032 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.066      ;
+; -0.031 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.065      ;
+; -0.027 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.061      ;
+; -0.027 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.058      ;
+; -0.026 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.057      ;
+; -0.023 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.057      ;
+; -0.022 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.054      ;
+; -0.022 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.054      ;
+; -0.022 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.053      ;
+; -0.021 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.055      ;
+; -0.021 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S22 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.055      ;
+; -0.018 ; devoir_2_ii_c:generateur|state.S24 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.050      ;
+; -0.017 ; devoir_2_ii_c:generateur|state.S24 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.049      ;
+; -0.008 ; devoir_2_ii_c:generateur|state.S16 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.039      ;
+; -0.005 ; devoir_2_ii_c:generateur|state.S19 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.035      ;
+; -0.003 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.037      ;
+; -0.002 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.036      ;
+; -0.001 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.033      ;
+; -0.001 ; devoir_2_ii_c:generateur|state.S29 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.033      ;
+; -0.001 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.003      ; 1.036      ;
+; 0.002  ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.032      ;
+; 0.007  ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.025      ;
+; 0.010  ; devoir_2_ii_c:generateur|state.S25 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.024      ;
+; 0.011  ; devoir_2_ii_c:generateur|state.S25 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.002      ; 1.023      ;
+; 0.012  ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.020      ;
+; 0.013  ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.019      ;
+; 0.017  ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.015      ;
+; 0.022  ; devoir_2_ii_c:generateur|state.S30 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 1.000        ; -0.002     ; 1.008      ;
+; 0.025  ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.006      ;
+; 0.026  ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.006      ;
+; 0.028  ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 1.000        ; 0.003      ; 1.007      ;
+; 0.028  ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.003      ;
+; 0.030  ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.001      ;
+; 0.031  ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.000      ;
+; 0.032  ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.000      ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.268 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S23 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.420      ;
+; 0.321 ; devoir_2_ii_c:generateur|state.S27 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.473      ;
+; 0.326 ; devoir_2_ii_c:generateur|state.S19 ; devoir_2_ii_c:generateur|state.S20 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.478      ;
+; 0.326 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S23 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.478      ;
+; 0.334 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S8  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.486      ;
+; 0.337 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S13 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.489      ;
+; 0.345 ; devoir_2_ii_c:generateur|state.S25 ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.497      ;
+; 0.357 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S2  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.364 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S3  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.516      ;
+; 0.382 ; devoir_2_ii_c:generateur|state.S28 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.534      ;
+; 0.390 ; devoir_2_ii_c:generateur|state.S28 ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.542      ;
+; 0.393 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.545      ;
+; 0.400 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S23 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.552      ;
+; 0.407 ; devoir_2_ii_c:generateur|state.S23 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.561      ;
+; 0.410 ; devoir_2_ii_c:generateur|state.S10 ; devoir_2_ii_c:generateur|state.S11 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.562      ;
+; 0.417 ; devoir_2_ii_c:generateur|state.S9  ; devoir_2_ii_c:generateur|state.S10 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.569      ;
+; 0.421 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S7  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.573      ;
+; 0.422 ; devoir_2_ii_c:generateur|state.S13 ; devoir_2_ii_c:generateur|state.S14 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.574      ;
+; 0.431 ; devoir_2_ii_c:generateur|state.S16 ; devoir_2_ii_c:generateur|state.S17 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.583      ;
+; 0.442 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; -0.003     ; 0.591      ;
+; 0.465 ; devoir_2_ii_c:generateur|state.S27 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.617      ;
+; 0.466 ; devoir_2_ii_c:generateur|state.S24 ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; -0.002     ; 0.616      ;
+; 0.485 ; devoir_2_ii_c:generateur|state.S15 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.001      ; 0.638      ;
+; 0.511 ; devoir_2_ii_c:generateur|state.S26 ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.665      ;
+; 0.516 ; devoir_2_ii_c:generateur|state.S11 ; devoir_2_ii_c:generateur|state.S12 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.523 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S9  ; clk          ; clk         ; 0.000        ; -0.003     ; 0.672      ;
+; 0.526 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S5  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.678      ;
+; 0.531 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S4  ; clk          ; clk         ; 0.000        ; 0.003      ; 0.686      ;
+; 0.533 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S15 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.687      ;
+; 0.535 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.687      ;
+; 0.541 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.695      ;
+; 0.548 ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S19 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.700      ;
+; 0.592 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.744      ;
+; 0.598 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.752      ;
+; 0.619 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; -0.001     ; 0.770      ;
+; 0.648 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.802      ;
+; 0.650 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.804      ;
+; 0.656 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.810      ;
+; 0.656 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.810      ;
+; 0.658 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S21 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.810      ;
+; 0.658 ; devoir_2_ii_c:generateur|state.S22 ; devoir_2_ii_c:generateur|state.S23 ; clk          ; clk         ; 0.000        ; -0.002     ; 0.808      ;
+; 0.658 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; -0.001     ; 0.809      ;
+; 0.660 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; -0.001     ; 0.811      ;
+; 0.661 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.813      ;
+; 0.676 ; devoir_2_ii_c:generateur|state.S7  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; -0.001     ; 0.827      ;
+; 0.687 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.003      ; 0.842      ;
+; 0.689 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.841      ;
+; 0.690 ; devoir_2_ii_c:generateur|state.S15 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.842      ;
+; 0.696 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.848      ;
+; 0.699 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.851      ;
+; 0.708 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.860      ;
+; 0.713 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.867      ;
+; 0.716 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.870      ;
+; 0.717 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.871      ;
+; 0.718 ; devoir_2_ii_c:generateur|state.S14 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.872      ;
+; 0.718 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.872      ;
+; 0.719 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.873      ;
+; 0.721 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.873      ;
+; 0.722 ; devoir_2_ii_c:generateur|state.S22 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.874      ;
+; 0.727 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.003      ; 0.882      ;
+; 0.728 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S21 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.882      ;
+; 0.731 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 0.000        ; -0.003     ; 0.880      ;
+; 0.737 ; devoir_2_ii_c:generateur|state.S4  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.889      ;
+; 0.740 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; -0.001     ; 0.891      ;
+; 0.742 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; -0.001     ; 0.893      ;
+; 0.745 ; devoir_2_ii_c:generateur|state.S8  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; -0.001     ; 0.896      ;
+; 0.784 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.938      ;
+; 0.784 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.938      ;
+; 0.789 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.941      ;
+; 0.795 ; devoir_2_ii_c:generateur|state.S0  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.003      ; 0.950      ;
+; 0.800 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S6  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.952      ;
+; 0.803 ; devoir_2_ii_c:generateur|state.S19 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.955      ;
+; 0.806 ; devoir_2_ii_c:generateur|state.S17 ; devoir_2_ii_c:generateur|state.S18 ; clk          ; clk         ; 0.000        ; -0.001     ; 0.957      ;
+; 0.807 ; devoir_2_ii_c:generateur|state.S19 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.959      ;
+; 0.808 ; devoir_2_ii_c:generateur|state.S19 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.960      ;
+; 0.813 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S26 ; clk          ; clk         ; 0.000        ; -0.003     ; 0.962      ;
+; 0.816 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.968      ;
+; 0.819 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.971      ;
+; 0.820 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.974      ;
+; 0.824 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.976      ;
+; 0.824 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.978      ;
+; 0.825 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.979      ;
+; 0.841 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.995      ;
+; 0.841 ; devoir_2_ii_c:generateur|state.S1  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.995      ;
+; 0.842 ; devoir_2_ii_c:generateur|state.S21 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.994      ;
+; 0.844 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; 0.002      ; 0.998      ;
+; 0.845 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; -0.001     ; 0.996      ;
+; 0.846 ; devoir_2_ii_c:generateur|state.S2  ; devoir_2_ii_c:generateur|state.S29 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.000      ;
+; 0.848 ; devoir_2_ii_c:generateur|state.S3  ; devoir_2_ii_c:generateur|state.S25 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.000      ;
+; 0.849 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.000      ;
+; 0.850 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.001      ;
+; 0.852 ; devoir_2_ii_c:generateur|state.S6  ; devoir_2_ii_c:generateur|state.S27 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.003      ;
+; 0.852 ; devoir_2_ii_c:generateur|state.S12 ; devoir_2_ii_c:generateur|state.S16 ; clk          ; clk         ; 0.000        ; 0.003      ; 1.007      ;
+; 0.854 ; devoir_2_ii_c:generateur|state.S20 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.006      ;
+; 0.855 ; devoir_2_ii_c:generateur|state.S5  ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.006      ;
+; 0.858 ; devoir_2_ii_c:generateur|state.S30 ; devoir_2_ii_c:generateur|state.S0  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.008      ;
+; 0.863 ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S24 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.015      ;
+; 0.867 ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.019      ;
+; 0.868 ; devoir_2_ii_c:generateur|state.S18 ; devoir_2_ii_c:generateur|state.S30 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.020      ;
+; 0.869 ; devoir_2_ii_c:generateur|state.S25 ; devoir_2_ii_c:generateur|state.S28 ; clk          ; clk         ; 0.000        ; 0.002      ; 1.023      ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk   ; Rise       ; clk                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S10 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S10 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S11 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S11 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S12 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S12 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S13 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S13 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S14 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S14 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S15 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S15 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S16 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S16 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S17 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S17 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S18 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S18 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S19 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S19 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S2  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S2  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S20 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S20 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S21 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S21 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S22 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S22 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S23 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S23 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S24 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S24 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S25 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S25 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S26 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S26 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S27 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S27 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S28 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S28 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S29 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S29 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S3  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S3  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S30 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S30 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S4  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S4  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S5  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S5  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S6  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S6  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S7  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S7  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S8  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S8  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S9  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; devoir_2_ii_c:generateur|state.S9  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clk_delay_ctrl|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clk_delay_ctrl|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clk_delay_ctrl|clkout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clk_delay_ctrl|clkout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S0|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S0|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S10|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S10|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S11|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S11|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S12|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S12|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S13|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S13|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S14|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S14|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S15|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S15|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S16|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S16|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S17|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S17|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S18|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S18|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S19|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S19|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S1|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S1|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S20|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; generateur|state.S20|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; generateur|state.S21|clk           ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; hex0[*]   ; clk        ; 7.111 ; 7.111 ; Rise       ; clk             ;
+;  hex0[0]  ; clk        ; 6.856 ; 6.856 ; Rise       ; clk             ;
+;  hex0[1]  ; clk        ; 6.857 ; 6.857 ; Rise       ; clk             ;
+;  hex0[2]  ; clk        ; 6.870 ; 6.870 ; Rise       ; clk             ;
+;  hex0[3]  ; clk        ; 6.984 ; 6.984 ; Rise       ; clk             ;
+;  hex0[4]  ; clk        ; 6.929 ; 6.929 ; Rise       ; clk             ;
+;  hex0[5]  ; clk        ; 7.111 ; 7.111 ; Rise       ; clk             ;
+;  hex0[6]  ; clk        ; 6.963 ; 6.963 ; Rise       ; clk             ;
+; hex1[*]   ; clk        ; 7.222 ; 7.222 ; Rise       ; clk             ;
+;  hex1[1]  ; clk        ; 7.222 ; 7.222 ; Rise       ; clk             ;
+;  hex1[2]  ; clk        ; 7.215 ; 7.215 ; Rise       ; clk             ;
+; hex2[*]   ; clk        ; 5.154 ; 5.154 ; Rise       ; clk             ;
+;  hex2[6]  ; clk        ; 5.154 ; 5.154 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; hex0[*]   ; clk        ; 4.576 ; 4.576 ; Rise       ; clk             ;
+;  hex0[0]  ; clk        ; 4.597 ; 4.597 ; Rise       ; clk             ;
+;  hex0[1]  ; clk        ; 4.576 ; 4.576 ; Rise       ; clk             ;
+;  hex0[2]  ; clk        ; 4.635 ; 4.635 ; Rise       ; clk             ;
+;  hex0[3]  ; clk        ; 4.725 ; 4.725 ; Rise       ; clk             ;
+;  hex0[4]  ; clk        ; 4.772 ; 4.772 ; Rise       ; clk             ;
+;  hex0[5]  ; clk        ; 4.761 ; 4.761 ; Rise       ; clk             ;
+;  hex0[6]  ; clk        ; 4.754 ; 4.754 ; Rise       ; clk             ;
+; hex1[*]   ; clk        ; 5.054 ; 5.054 ; Rise       ; clk             ;
+;  hex1[1]  ; clk        ; 5.061 ; 5.061 ; Rise       ; clk             ;
+;  hex1[2]  ; clk        ; 5.054 ; 5.054 ; Rise       ; clk             ;
+; hex2[*]   ; clk        ; 4.626 ; 4.626 ; Rise       ; clk             ;
+;  hex2[6]  ; clk        ; 4.626 ; 4.626 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.936  ; 0.268 ; N/A      ; N/A     ; -1.222              ;
+;  clk             ; -1.936  ; 0.268 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -21.985 ; 0.0   ; 0.0      ; 0.0     ; -32.222             ;
+;  clk             ; -21.985 ; 0.000 ; N/A      ; N/A     ; -32.222             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; hex0[*]   ; clk        ; 14.222 ; 14.222 ; Rise       ; clk             ;
+;  hex0[0]  ; clk        ; 13.693 ; 13.693 ; Rise       ; clk             ;
+;  hex0[1]  ; clk        ; 13.714 ; 13.714 ; Rise       ; clk             ;
+;  hex0[2]  ; clk        ; 13.725 ; 13.725 ; Rise       ; clk             ;
+;  hex0[3]  ; clk        ; 13.961 ; 13.961 ; Rise       ; clk             ;
+;  hex0[4]  ; clk        ; 13.816 ; 13.816 ; Rise       ; clk             ;
+;  hex0[5]  ; clk        ; 14.222 ; 14.222 ; Rise       ; clk             ;
+;  hex0[6]  ; clk        ; 13.923 ; 13.923 ; Rise       ; clk             ;
+; hex1[*]   ; clk        ; 14.525 ; 14.525 ; Rise       ; clk             ;
+;  hex1[1]  ; clk        ; 14.416 ; 14.416 ; Rise       ; clk             ;
+;  hex1[2]  ; clk        ; 14.525 ; 14.525 ; Rise       ; clk             ;
+; hex2[*]   ; clk        ; 9.785  ; 9.785  ; Rise       ; clk             ;
+;  hex2[6]  ; clk        ; 9.785  ; 9.785  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; hex0[*]   ; clk        ; 4.576 ; 4.576 ; Rise       ; clk             ;
+;  hex0[0]  ; clk        ; 4.597 ; 4.597 ; Rise       ; clk             ;
+;  hex0[1]  ; clk        ; 4.576 ; 4.576 ; Rise       ; clk             ;
+;  hex0[2]  ; clk        ; 4.635 ; 4.635 ; Rise       ; clk             ;
+;  hex0[3]  ; clk        ; 4.725 ; 4.725 ; Rise       ; clk             ;
+;  hex0[4]  ; clk        ; 4.772 ; 4.772 ; Rise       ; clk             ;
+;  hex0[5]  ; clk        ; 4.761 ; 4.761 ; Rise       ; clk             ;
+;  hex0[6]  ; clk        ; 4.754 ; 4.754 ; Rise       ; clk             ;
+; hex1[*]   ; clk        ; 5.054 ; 5.054 ; Rise       ; clk             ;
+;  hex1[1]  ; clk        ; 5.061 ; 5.061 ; Rise       ; clk             ;
+;  hex1[2]  ; clk        ; 5.054 ; 5.054 ; Rise       ; clk             ;
+; hex2[*]   ; clk        ; 4.626 ; 4.626 ; Rise       ; clk             ;
+;  hex2[6]  ; clk        ; 4.626 ; 4.626 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 188      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 188      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 31    ; 31   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 295   ; 295  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Feb 26 16:38:32 2018
+Info: Command: quartus_sta devoir_2_iii -c devoir_2_iii
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'devoir_2_iii.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.936
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.936       -21.985 clk 
+Info (332146): Worst-case hold slack is 0.574
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.574         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -32.222 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.366
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.366        -1.727 clk 
+Info (332146): Worst-case hold slack is 0.268
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.268         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -32.222 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 392 megabytes
+    Info: Processing ended: Mon Feb 26 16:38:33 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,165 @@
+C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/mux4.vhd {1 {vcom -work work -2002 -explicit {C:\Users\Wi7HomeVMx64\Desktop\Devoir_4_1227\ModelSim\implementation_9_instructions\mux4.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mux4
+-- Compiling architecture behaviour of mux4
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/proc_mips.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/proc_mips.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity proc_mips
+-- Compiling architecture struct of proc_mips
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/mips.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit {C:\Users\Wi7HomeVMx64\Desktop\Devoir_4_1227\ModelSim\implementation_9_instructions\files\mips.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity mips
+-- Compiling architecture test of mips
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/maindec.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit {C:\Users\Wi7HomeVMx64\Desktop\Devoir_4_1227\ModelSim\implementation_9_instructions\files\maindec.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity maindec
+-- Compiling architecture behave of maindec
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/sl2.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/sl2.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sl2
+-- Compiling architecture behave of sl2
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/alu.vhd {2 {vcom -work implementation_9_instructions -2002 -explicit {C:\Users\Wi7HomeVMx64\Desktop\Devoir_4_1227\ModelSim\implementation_9_instructions\files\alu.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity alu
+-- Compiling architecture behave of alu
+** Warning: [14] C:\Users\Wi7HomeVMx64\Desktop\Devoir_4_1227\ModelSim\implementation_9_instructions\files\alu.vhd(45): (vcom-1272) Length of expected is 32; length of actual is 64.
+
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/flopr.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/flopr.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity flopr
+-- Compiling architecture asynchronous of flopr
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/controller.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit {C:\Users\Wi7HomeVMx64\Desktop\Devoir_4_1227\ModelSim\implementation_9_instructions\files\controller.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity controller
+-- Compiling architecture struct of controller
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/mux2.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/mux2.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2
+-- Compiling architecture behave of mux2
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/aludec.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/aludec.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity aludec
+-- Compiling architecture behave of aludec
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/zeroExtend.vhd {1 {vcom -work work -2002 -explicit {C:\Users\Wi7HomeVMx64\Desktop\Devoir_4_1227\ModelSim\implementation_9_instructions\zeroExtend.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity zeroExtend
+-- Compiling architecture behave of zeroExtend
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/regfile.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/regfile.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity regfile
+-- Compiling architecture behave of regfile
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/datapath.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit {C:\Users\Wi7HomeVMx64\Desktop\Devoir_4_1227\ModelSim\implementation_9_instructions\files\datapath.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity datapath
+-- Compiling architecture struct of datapath
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/testbench.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit {C:\Users\Wi7HomeVMx64\Desktop\Devoir_4_1227\ModelSim\implementation_9_instructions\files\testbench.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity testbench
+-- Compiling architecture test of testbench
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/imem.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit {C:\Users\Wi7HomeVMx64\Desktop\Devoir_4_1227\ModelSim\implementation_9_instructions\files\imem.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity imem
+-- Compiling architecture behave of imem
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/adder.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/adder.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity adder
+-- Compiling architecture behave of adder
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/signext.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/signext.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity signext
+-- Compiling architecture behave of signext
+
+} {} {}} C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/dmem.vhd {1 {vcom -work implementation_9_instructions -2002 -explicit C:/Users/Wi7HomeVMx64/Desktop/Devoir_4_1227/ModelSim/implementation_9_instructions/files/dmem.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity dmem
+-- Compiling architecture behave of dmem
+
+} {} {}}
